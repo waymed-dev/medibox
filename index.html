@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | 우리 앱의 이름</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #818cf8;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .container {
+            padding: 2rem;
+            max-width: 600px;
+            width: 100%;
+            z-index: 1;
+        }
+
+        /* 배경 장식 */
+        .bg-decoration {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--secondary-color) 0%, transparent 70%);
+            filter: blur(80px);
+            opacity: 0.15;
+            top: -100px;
+            right: -100px;
+            z-index: 0;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background-color: var(--primary-color);
+            border-radius: 24px;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.05em;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #64748b;
+            margin-bottom: 2.5rem;
+        }
+
+        .store-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid #e2e8f0;
+            background: white;
+            color: #64748b;
+            cursor: default; /* 아직은 클릭 불가 */
+        }
+
+        /* 출시 후 아래 클래스로 변경하면 강조됨 */
+        .btn.active {
+            background: #1e293b;
+            color: white;
+            border-color: #1e293b;
+            cursor: pointer;
+        }
+
+        .btn.active:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .badge {
+            display: block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .footer {
+            margin-top: 4rem;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        /* 기기별 자동 이동 스크립트 (출시 전에는 주석 처리) */
+        /* <script>
+            // 여기에 이전 답변의 리다이렉트 코드를 넣으면 됩니다.
+        </script> 
+        */
+    </style>
+</head>
+<body>
+    <div class="bg-decoration"></div>
+    
+    <div class="container">
+        <div class="logo">App</div>
+        
+        <h1>곧 만날 수 있어요!</h1>
+        <p>우리 서비스가 더 멋진 모습으로 찾아오기 위해<br>현재 스토어 심사 중입니다. 잠시만 기다려 주세요.</p>
+
+        <div class="store-buttons">
+            <div class="btn">
+                <div style="text-align: left;">
+                    <span class="badge">Coming Soon</span>
+                    <strong>App Store</strong>
+                </div>
+            </div>
+            <div class="btn">
+                <div style="text-align: left;">
+                    <span class="badge">Coming Soon</span>
+                    <strong>Google Play</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2024 (주)회사이름. All rights reserved.
+        </div>
+    </div>
+
+    <script>
+        /**
+         * 출시 후 사용법:
+         * 1. 아래 주석을 해제합니다.
+         * 2. 위 버튼들의 class에 'active'를 추가하고 href를 넣습니다.
+         * 3. 이 스크립트가 실행되면 접속 기기에 따라 자동으로 스토어로 보냅니다.
+         */
+        
+        /*
+        window.onload = function() {
+            var userAgent = navigator.userAgent.toLowerCase();
+            if (/iphone|ipad|ipod/.test(userAgent)) {
+                window.location.href = "https://apps.apple.com/app/idYOUR_ID";
+            } else if (/android/.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=YOUR_PACKAGE";
+            }
+        };
+        */
+    </script>
+</body>
+</html>
