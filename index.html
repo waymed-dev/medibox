@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon | MEDIBOX</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        var userAgent = navigator.userAgent.toLowerCase();
+        if (/iphone|ipad|ipod/.test(userAgent)) {
+            // replace를 사용하여 뒤로 가기 시 무한 루프에 빠지는 것을 방지합니다.
+            window.location.replace("https://apps.apple.com/us/app/%EB%A9%94%EB%94%94%EB%B0%95%EC%8A%A4/id6760811577");
+        }
+    </script>
+
     <style>
         :root {
             --primary-color: #4f46e5;
@@ -125,12 +134,6 @@
             font-size: 0.9rem;
             color: #94a3b8;
         }
-
-        /* 기기별 자동 이동 스크립트 (출시 전에는 주석 처리) */
-        /* <script>
-            // 여기에 이전 답변의 리다이렉트 코드를 넣으면 됩니다.
-        </script> 
-        */
     </style>
 </head>
 <body>
@@ -143,12 +146,13 @@
         <p>우리 서비스가 더 멋진 모습으로 찾아오기 위해<br>현재 스토어 심사 중입니다. 잠시만 기다려 주세요.</p>
 
         <div class="store-buttons">
-            <div class="btn">
+            <a href="https://apps.apple.com/us/app/%EB%A9%94%EB%94%94%EB%B0%95%EC%8A%A4/id6760811577" class="btn active">
                 <div style="text-align: left;">
-                    <span class="badge">Coming Soon</span>
+                    <span class="badge">Download on the</span>
                     <strong>App Store</strong>
                 </div>
-            </div>
+            </a>
+            
             <div class="btn">
                 <div style="text-align: left;">
                     <span class="badge">Coming Soon</span>
@@ -161,25 +165,5 @@
             &copy; 2026 강북삼성병원. All rights reserved.
         </div>
     </div>
-
-    <script>
-        /**
-         * 출시 후 사용법:
-         * 1. 아래 주석을 해제합니다.
-         * 2. 위 버튼들의 class에 'active'를 추가하고 href를 넣습니다.
-         * 3. 이 스크립트가 실행되면 접속 기기에 따라 자동으로 스토어로 보냅니다.
-         */
-        
-
-        window.onload = function() {
-            var userAgent = navigator.userAgent.toLowerCase();
-            if (/iphone|ipad|ipod/.test(userAgent)) {
-                window.location.href = "https://apps.apple.com/us/app/%EB%A9%94%EB%94%94%EB%B0%95%EC%8A%A4/id6760811577";
-            } else if (/android/.test(userAgent)) {
-                window.location.href = "https://play.google.com/store/apps/details?id=com.waycen.panicdisorder";
-            }
-        };
-
-    </script>
 </body>
 </html>
