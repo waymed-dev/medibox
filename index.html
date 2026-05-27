@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon | MEDIBOX</title>
+    <title>MEDIBOX 앱 다운로드</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap" rel="stylesheet">
     
     <script>
@@ -11,7 +11,7 @@
         if (/iphone|ipad|ipod/.test(userAgent)) {
             // replace를 사용하여 뒤로 가기 시 무한 루프에 빠지는 것을 방지합니다.
             window.location.replace("https://apps.apple.com/us/app/%EB%A9%94%EB%94%94%EB%B0%95%EC%8A%A4/id6760811577");
-        } else {
+        } else if (/android/.test(userAgent)) {
             window.location.replace("https://play.google.com/store/apps/details?id=kr.co.kbsmc.mydata&hl=ko");            
         }
     </script>
@@ -72,7 +72,7 @@
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 2rem;
+            font-size: 1.3rem; /* 텍스트 길이에 맞게 폰트 사이즈 조정 */
             font-weight: bold;
             box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.2);
         }
@@ -88,6 +88,7 @@
             line-height: 1.6;
             color: #64748b;
             margin-bottom: 2.5rem;
+            word-break: keep-all; /* 텍스트 줄바꿈 자연스럽게 처리 */
         }
 
         .store-buttons {
@@ -105,23 +106,17 @@
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
-            border: 2px solid #e2e8f0;
-            background: white;
-            color: #64748b;
-            cursor: default; /* 아직은 클릭 불가 */
-        }
-
-        /* 출시 후 아래 클래스로 변경하면 강조됨 */
-        .btn.active {
             background: #1e293b;
             color: white;
-            border-color: #1e293b;
+            border: 2px solid #1e293b;
             cursor: pointer;
         }
 
-        .btn.active:hover {
+        .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            background: #0f172a;
+            border-color: #0f172a;
         }
 
         .badge {
@@ -129,6 +124,7 @@
             font-size: 0.7rem;
             text-transform: uppercase;
             margin-bottom: 2px;
+            color: #cbd5e1; /* 버튼 내부 텍스트 대비 향상 */
         }
 
         .footer {
@@ -142,20 +138,20 @@
     <div class="bg-decoration"></div>
     
     <div class="container">
-        <div class="logo">App</div>
+        <div class="logo">메디박스</div>
         
-        <h1>곧 만날 수 있어요!</h1>
-        <p>우리 서비스가 더 멋진 모습으로 찾아오기 위해<br>현재 스토어 심사 중입니다. 잠시만 기다려 주세요.</p>
+        <h1>지금 바로 만나보세요!</h1>
+        <p>강북삼성병원 마이데이터 서비스, <strong>메디박스</strong> 앱이 정식 출시되었습니다.<br>이용 중이신 기기에 맞게 앱을 다운로드하고 스마트한 건강 관리를 시작해 보세요.</p>
 
         <div class="store-buttons">
-            <a href="https://apps.apple.com/us/app/%EB%A9%94%EB%94%94%EB%B0%95%EC%8A%A4/id6760811577" class="btn active">
+            <a href="https://apps.apple.com/us/app/%EB%A9%94%EB%94%94%EB%B0%95%EC%8A%A4/id6760811577" class="btn">
                 <div style="text-align: left;">
                     <span class="badge">Download on the</span>
                     <strong>App Store</strong>
                 </div>
             </a>
 
-            <a href="https://play.google.com/store/apps/details?id=kr.co.kbsmc.mydata&hl=ko" class="btn active">
+            <a href="https://play.google.com/store/apps/details?id=kr.co.kbsmc.mydata&hl=ko" class="btn">
                 <div style="text-align: left;">
                     <span class="badge">Download on the</span>
                     <strong>Google Play</strong>
